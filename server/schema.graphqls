@@ -1,0 +1,23 @@
+# TODO: SHOULD BE SHARED WITH BACKEND (submodule?)
+type Skill {
+  id: ID!
+  name: String!
+  value: Int!
+}
+
+type User {
+  id: ID!
+}
+
+type Query {
+  skills: [Skill!]!
+}
+
+input NewSkill {
+  name: String!
+  value: Int!
+}
+
+type Mutation {
+  addSkill(input: NewSkill!): Skill!
+}
